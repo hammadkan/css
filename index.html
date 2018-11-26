@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.widget_breadcrumb {
+	overflow: visible;
+	padding: 10px 0 4px;
+	line-height: 18px;
+}
+.widget_breadcrumb.nav a {
+	text-decoration: none;
+}
+.widget_breadcrumb.nav ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.widget_breadcrumb.nav ul:after {
+	clear: both;
+	display: block;
+	height: 1px;
+	padding: 0;
+	margin: 0;
+	content: ".";
+	overflow: hidden;
+}
+.widget_breadcrumb.nav li {
+	display: block;
+	float: left;
+	position: relative;
+	text-decoration: none;
+	transition-duration: 0.5s;
+}
+.widget_breadcrumb > ul li.moredrop {
+	padding: 0;
+}
+.widget_breadcrumb > ul li.moredrop .dropbtn {
+	padding: 0 5px 5px 0;
+	display: inline-block;
+}
+.widget_breadcrumb.nav li + li:before {
+	content: "|";
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.widget_breadcrumb.nav ul li ul li:before {
+	content: "";
+	padding: 0;
+}
+.widget_breadcrumb.nav ul li ul li:hover {
+	background-color: #e8e9eb;
+}
+.widget_breadcrumb.nav li:last-child::after {
+	display: none;
+}
+.widget_breadcrumb.nav li:hover, li:focus-within {
+ cursor: pointer;
+}
+.widget_breadcrumb.nav ul li .dropmedown-holder {
+	visibility: hidden;
+	opacity: 0;
+	min-width: 300px;
+	position: absolute;
+	transition: all 0.5s ease;
+	right: 0;
+	display: none;
+	margin-top: 0;
+	top: 4px;
+	z-index: 4;
+	text-align: right;
+	padding-top: 24px;
+}
+.widget_breadcrumb.nav ul li ul {
+	box-shadow: 0 4px 8px rgba(50, 50, 50, 0.2);
+}
+.widget_breadcrumb.nav ul li:hover .dropmedown-holder {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+.widget_breadcrumb.nav ul li ul li {
+	clear: both;
+	width: 100%;
+	background: #fcfcfc;
+	border-color: #d5d7d7;
+}
+.widget_breadcrumb.nav .dropmedown .mine {
+	display: none;
+}
+.widget_breadcrumb.nav .dropmedown .Occupational {
+	display: none;
+}
+.widget_breadcrumb.nav .dropmedown .transportation {
+	display: none;
+}
+.widget_breadcrumb.nav .dropmedown .environmental {
+	display: none;
+}
+.widget_breadcrumb.nav ul li ul.dropmedown li {
+	padding: 0;
+}
+.widget_breadcrumb.nav ul li ul.dropmedown li a {
+	padding: 8px;
+	display: block;
+}
+
+@media screen and (max-width:1110px) {
+.widget_breadcrumb.nav .environmental {
+	display: none;
+}
+.widget_breadcrumb.nav .dropmedown .environmental {
+	display: block;
+}
+}
+
+@media screen and (max-width:955px) {
+.widget_breadcrumb.nav .mine {
+	display: none;
+}
+.widget_breadcrumb.nav .dropmedown .mine {
+	display: block;
+}
+}
+
+@media screen and (max-width:710px) {
+.widget_breadcrumb.nav .transportation {
+	display: none;
+}
+.widget_breadcrumb.nav .dropmedown .transportation {
+	display: block;
+}
+}
+
+@media screen and (max-width: 600px) {
+div.widget_breadcrumb {
+	display: block;
+}
+}
+
+@media screen and (max-width:500px) {
+.widget_breadcrumb.nav .Occupational {
+	display: none;
+}
+.widget_breadcrumb.nav .dropmedown .Occupational {
+	display: block;
+}
+.widget_breadcrumb.nav ul li .dropmedown-holder {
+	text-align: left;
+	left: 0;
+}
+}
+
+@media screen and (max-width:390px) {
+.widget_breadcrumb.nav ul li .dropmedown-holder {
+	min-width: 200px;
+}
+}
+</style>
+<title>Responsive Menu Dropdown Css</title>
+</head>
+
+<body>
+<div class="col12 slot1" data-slot-id="1">
+  <div class="widget_breadcrumb nav">
+    <ul aria-label="breadcrumb navigation region">
+      <li class="ehs"><strong>EHS Categories</strong></li>
+      <li class="Occupational"><a href="#">Occupational Health &amp; Safety Training - OSHA</a></li>
+      <li class="transportation"><a href="#">Transportation Safety Training </a></li>
+      <li class="mine"><a href="#">Mine Safety Training - MSHA Part 46 </a></li>
+      <li class="environmental"><a href="#">Environmental Safety</a></li>
+      <li class="moredrop"> <a href="javascript:void(0)" class="dropbtn">More...</a>
+        <div class="dropmedown-holder">
+          <ul class="dropmedown">
+            <li class="Occupational"><a href="#">Occupational Health &amp; Safety Training - OSHA</a></li>
+            <li class="transportation"><a href="#">Transportation Safety Training </a></li>
+            <li class="mine"><a href="#">Mine Safety Training - MSHA Part 46 </a></li>
+            <li class="environmental"><a href="#">Environmental Safety</a></li>
+            <li class="underground"><a href="#">Underground Storage Tank (UST) Training </a></li>
+            <li><a href="#">Formacion en Materia De Seguridad</a></li>
+            <li><a href="#">Canada Health &amp; Safety Training</a></li>
+            <li><a href="#">Behavioral Safety</a></li>
+            <li><a href="#">EM 385 Training</a></li>
+            <li><a href="#">ISO Trainings</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
